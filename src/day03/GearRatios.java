@@ -30,11 +30,11 @@ public class GearRatios {
             Matcher numberMatcher = numberPattern.matcher(input.get(i));
 
             while (numberMatcher.find()) {
-                int number = Integer.parseInt(numberMatcher.group());
+                int value = Integer.parseInt(numberMatcher.group());
                 int startIndex = numberMatcher.start();
                 int endIndex = numberMatcher.end() - 1; // index of last matching character
 
-                numbers.add(new Number(number, i, startIndex, endIndex));
+                numbers.add(new Number(value, i, startIndex, endIndex));
             }
         }
         return numbers;
